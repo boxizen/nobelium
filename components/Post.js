@@ -37,7 +37,7 @@ export default function Post (props) {
           'w-full flex mt-7 items-start text-gray-500 text-sm dark:text-gray-400 items-center',
           { 'max-w-3xl px-4': !fullWidth }
         )}>
-          <div className="flex">
+          {/* <div className="flex">
             <a href={BLOG.socialLink || '#'} className="flex">
               <Image
                 alt={BLOG.author}
@@ -49,7 +49,7 @@ export default function Post (props) {
               <p className="ml-2 md:block">{BLOG.author}</p>
             </a>
             <span className="block">&nbsp;/&nbsp;</span>
-          </div>
+          </div> */}
           <div className="mr-2 md:ml-0">
             <FormattedDate date={post.date} />
           </div>

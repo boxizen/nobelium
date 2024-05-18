@@ -40,11 +40,11 @@ const BLOG = {
     // support provider: gitalk, utterances, cusdis
     provider: '', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: '', // The repository of store comments
-      owner: '',
-      admin: [],
-      clientID: '',
-      clientSecret: '',
+      repo: 'boxizen.github.io', // The repository of store comments
+      owner: 'boxizen',
+      admin: ['boxizen'],
+      clientID: 'Ov23li0T45E7t68nPyGi',
+      clientSecret: process.env.NOBELIUM_GIT_TALK_SECRET,
       distractionFreeMode: false
     },
     utterancesConfig: {
