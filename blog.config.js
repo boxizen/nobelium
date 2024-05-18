@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'Edwiin\'s Blog',
+  title: 'Edwiin Tsang',
   author: 'Edwiin Tsang',
   email: 'boxizen@gmail.com',
   link: 'https://edwiinx.com',

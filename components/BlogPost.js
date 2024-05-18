@@ -8,7 +8,7 @@ const BlogPost = ({ post }) => {
 
   return (
     <Link href={`${BLOG.path}/${post.slug}`}>
-      <article key={post.id} className="mb-6 md:mb-8">
+      <article key={post.id} className="mb-6 md:mb-10">
         <header className="flex flex-col justify-between md:flex-row md:items-baseline">
           <h2 className="text-lg md:text-xl font-medium mb-2 cursor-pointer text-black dark:text-gray-100">
             {post.title}
@@ -19,18 +19,18 @@ const BlogPost = ({ post }) => {
             {post.summary}
           </p>
           {/* TODO */}
-          {/* <div className="flex flex-row items-center">
+          <div className="flex flex-row items-center">
             <time className="flex-shrink-0 text-xs text-gray-600 dark:text-gray-400 mr-2">
               {'Posted on'} <FormattedDate date={post.date} />            
             </time>
-            {post.tags && (
+            {/* {post.tags && (
               <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
                 {post.tags.map(tag => (
                   <TagItem key={tag} tag={tag} />
                 ))}
               </div>
-            )}
-          </div> */}
+            )} */}
+          </div>
         </main>        
       </article>
     </Link>
