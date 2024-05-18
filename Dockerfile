@@ -1,14 +1,14 @@
-ARG NOTION_PAGE_ID = 
+ARG NOTION_PAGE_ID=412d146d60c1484590410d67bea90253
 # Install dependencies only when needed
-FROM node:14-alpine AS deps
+FROM node:20.5.1 AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package.json ./
+RUN yarn install
 
 # Rebuild the source code only when needed
-FROM node:14-alpine AS builder
+FROM node:20.5.1 AS builder
 ARG NOTION_PAGE_ID
 WORKDIR /app
 COPY . .

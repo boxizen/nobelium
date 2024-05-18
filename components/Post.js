@@ -34,10 +34,10 @@ export default function Post (props) {
       </h1>
       {post.type[0] !== 'Page' && (
         <nav className={cn(
-          'w-full flex mt-7 items-start text-gray-500 dark:text-gray-400',
+          'w-full flex mt-7 items-start text-gray-500 text-sm dark:text-gray-400 items-center',
           { 'max-w-3xl px-4': !fullWidth }
         )}>
-          <div className="flex mb-4">
+          <div className="flex">
             <a href={BLOG.socialLink || '#'} className="flex">
               <Image
                 alt={BLOG.author}
@@ -50,7 +50,7 @@ export default function Post (props) {
             </a>
             <span className="block">&nbsp;/&nbsp;</span>
           </div>
-          <div className="mr-2 mb-4 md:ml-0">
+          <div className="mr-2 md:ml-0">
             <FormattedDate date={post.date} />
           </div>
           {post.tags && (
