@@ -34,7 +34,7 @@ export default function Post (props) {
       </h1>
       {post.type[0] !== 'Page' && (
         <nav className={cn(
-          'w-full flex mt-7 items-start text-gray-500 text-sm dark:text-gray-400 items-center',
+          'w-full flex mt-7 items-start text-gray-500 text-sm dark:text-gray-400 items-center mb-3',
           { 'max-w-3xl px-4': !fullWidth }
         )}>
           {/* <div className="flex">
