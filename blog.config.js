@@ -38,13 +38,13 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk, utterances, cusdis
-    provider: '', // leave it empty if you don't need any comment plugin
+    provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: 'boxizen.github.io', // The repository of store comments
+      repo: 'nobelium', // The repository of store comments
       owner: 'boxizen',
       admin: ['boxizen'],
       clientID: 'Ov23li0T45E7t68nPyGi',
-      clientSecret: process.env.NOBELIUM_GIT_TALK_SECRET,
+      clientSecret: 'fcba7060f71b667ad8d8061cd8e3ca1b78b62c0c' || process.env.NOBELIUM_GIT_TALK_SECRET,
       distractionFreeMode: false
     },
     utterancesConfig: {
