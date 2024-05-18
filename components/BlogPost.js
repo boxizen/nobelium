@@ -18,7 +18,8 @@ const BlogPost = ({ post }) => {
           <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300 text-sm mb-1">
             {post.summary}
           </p>
-          <div className="flex flex-row items-center">
+          {/* TODO */}
+          {/* <div className="flex flex-row items-center">
             <time className="flex-shrink-0 text-xs text-gray-600 dark:text-gray-400 mr-2">
               {'Posted on'} <FormattedDate date={post.date} />            
             </time>
@@ -29,7 +30,7 @@ const BlogPost = ({ post }) => {
                 ))}
               </div>
             )}
-          </div>
+          </div> */}
         </main>        
       </article>
     </Link>
