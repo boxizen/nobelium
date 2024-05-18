@@ -1,8 +1,8 @@
 {
   "NAV": {
-    "INDEX": "博客",
-    "RSS": "订阅",
-    "SEARCH": "搜索",
+    "INDEX": "文章",
+    "RSS": "RSS",
+    "SEARCH": "🔍",
     "ABOUT": "关于"
   },
   "PAGINATION": {
