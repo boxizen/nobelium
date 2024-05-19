@@ -15,7 +15,7 @@ const BlogPost = ({ post }) => {
           </h2>          
         </header>
         <main>
-          <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300 text-sm mb-1">
+          <p className="md:block leading-8 text-gray-700 dark:text-gray-300 text-sm mb-1">
             {post.summary}
           </p>
           {/* TODO */}

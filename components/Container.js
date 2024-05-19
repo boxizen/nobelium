@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import Header, { HomeHeader } from '@/components/Header'
 import Footer from '@/components/Footer'
 import { useConfig } from '@/lib/config'
 import Head from 'next/head'
@@ -15,6 +15,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
     type: 'website',
     ...customMeta
   }
+
   return (
     <div>
       <Head>
@@ -69,10 +70,14 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
         className={`wrapper ${BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
           }`}
       >
-        <Header
-          navBarTitle={layout === 'blog' ? meta.title : null}
-          fullWidth={fullWidth}
-        />
+        {
+          layout === 'home' ? <HomeHeader /> : (
+            <Header
+              navBarTitle={layout === 'blog' ? meta.title : null}
+              isHome={layout === 'home'}
+              fullWidth={fullWidth}
+            />)
+        }        
         <main className={cn(
           'flex-grow transition-all',
           layout !== 'blog' && ['self-center px-4', fullWidth ? 'md:px-24' : 'w-full max-w-3xl']

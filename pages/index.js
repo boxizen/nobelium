@@ -25,8 +25,7 @@ export default function Blog ({ postsToShow, page, showNext }) {
   const { title, description } = useConfig()
 
   return (
-    <Container title={title} description={description}>
-      {/* <p class="text-4xl">{title}</p> */}
+    <Container title={title} description={description} layout="home">
       {postsToShow.map(post => (
         <BlogPost key={post.id} post={post} />
       ))}
