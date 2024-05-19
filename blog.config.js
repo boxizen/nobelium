@@ -40,7 +40,7 @@ const BLOG = {
     // support provider: gitalk, utterances, cusdis
     provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: 'nobelium', // The repository of store comments
+      repo: 'boxizen.github.io', // The repository of store comments
       owner: 'boxizen',
       admin: ['boxizen'],
       clientID: 'Ov23li0T45E7t68nPyGi',
