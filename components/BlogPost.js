@@ -6,6 +6,8 @@ import Link from "next/link";
 const BlogPost = ({ post }) => {
   const BLOG = useConfig();
 
+  console.log('post > tags >', post.tags);
+
   return (
     <Link href={`${BLOG.path}/${post.slug}`}>
       <article key={post.id} className="mb-6 md:mb-10">
@@ -23,13 +25,14 @@ const BlogPost = ({ post }) => {
             <time className="flex-shrink-0 text-xs text-gray-600 dark:text-gray-400 mr-2">
               {'Posted on'} <FormattedDate date={post.date} />            
             </time>
-            {/* {post.tags && (
+            {post.tags && (
               <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
                 {post.tags.map(tag => (
+                  // <div>{tag}</div>
                   <TagItem key={tag} tag={tag} />
                 ))}
               </div>
-            )} */}
+            )}
           </div>
         </main>        
       </article>
