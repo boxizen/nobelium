@@ -172,3 +172,21 @@ nav {
   font-weight: 700;
   color: '#020617';
 }
+
+.hover-tooltip {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.hover-tooltip:hover .tooltip {
+  opacity: 0.8;
+}
